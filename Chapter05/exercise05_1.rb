@@ -1,7 +1,7 @@
 puts 'Input your first name: '
-firstname = gets.chomp
+first_name = gets.chomp
 puts 'Input your middle name: '
-middlename = gets.chomp
+middle_name = gets.chomp
 puts 'Input your last name: '
-lastname = gets.chomp
-puts 'Welcome, ' + firstname + ' ' + middlename + ' ' + lastname + '!'
+last_name = gets.chomp
+puts 'Welcome, ' + first_name + ' ' + middle_name + ' ' + last_name + '!'

@@ -1,20 +1,20 @@
 #Fix up the ask method.
 
 def ask question
-	good_answer = false
-	while (not good_answer)
-		puts question
-		reply = gets.chomp.downcase
-		if (reply == 'yes' or reply == 'no' )
-			if reply == 'yes'
-				return true
-			end
-			return false 
-		else
-			puts ' Please answer "yes" or "no".'
-		end
-	end
-	answer # This is what we return (true or false).
+  good_answer = false
+  while (not good_answer)
+    puts question
+    reply = gets.chomp.downcase
+    if (reply == 'yes' or reply == 'no' )
+      if reply == 'yes'
+        return true
+      end
+      return false 
+    else
+      puts ' Please answer "yes" or "no".'
+    end
+  end
+  answer # This is what we return (true or false).
 end
 
 puts ' Hello, and thank you for...'

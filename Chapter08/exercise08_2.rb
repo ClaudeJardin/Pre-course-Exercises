@@ -9,6 +9,6 @@ puts ' '.center(width1 + width2)
 
 i = 0
 while i < 3
-	puts ('Chapter ' + (i + 1).to_s + ':  ' + titles[i]).ljust(width1) + ('page ' + pages[i].to_s.rjust(2)).rjust(width2)
-	i = i + 1
+  puts ('Chapter ' + (i + 1).to_s + ':  ' + titles[i]).ljust(width1) + ('page ' + pages[i].to_s.rjust(2)).rjust(width2)
+  i = i + 1
 end
