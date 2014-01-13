@@ -1,10 +1,10 @@
 def old_roman_numeral integer
-  n = [1000, 500, 100, 50, 10, 5, 1]
-  romans = ['M', 'D', 'C', 'L', 'X', 'V', 'I']
+  n = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+  romans = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
   result = ''
   i = 0
   
-  if integer < 5
+  if integer < 4
     return 'I' * integer
   end
   while i < n.length && integer > 0
@@ -12,7 +12,7 @@ def old_roman_numeral integer
     if r > 0
       prefix = ''
       if r > 1
-        prefix = old_roman_numeral r
+        prefix = old_roman_numeral (r - 1) * n[i]
       end
       
       middle = ''
@@ -31,11 +31,11 @@ def old_roman_numeral integer
 end
 
 integer = 0
-while integer < 1 || integer > 3000
+while integer < 1 || integer > 100000
   puts 'Input integer: '
   integer = gets.chomp.to_i
-  if integer < 1 || integer > 3000
-    puts 'Please input integer between 1 and 3000!'
+  if integer < 1 || integer > 100000
+    puts 'Please input integer between 1 and 100000!'
   end
 end
 result = old_roman_numeral integer
